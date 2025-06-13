@@ -21,6 +21,7 @@ class BookController extends Controller
             'title' => 'required|string|max:255',
             'author' => 'required|string',
             'released_at' => 'required|date',
+            'image_path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
         Book::create($data);
@@ -40,7 +41,7 @@ class BookController extends Controller
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'author' => 'required|string',
-            'released_at' => 'required|date',
+            'released_at' => 'required|date'
         ]);
 
         $book->update($data);

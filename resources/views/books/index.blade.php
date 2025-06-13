@@ -16,6 +16,7 @@
                 <div>
                     <a href="{{ route('book.show', $book) }}">Show</a>
                     <a href="{{ route('book.edit', $book) }}">Edit</a>
+                    <img alt="no image">{{ $book->image_path }}</img>
                 </div>
             </li>
         @endforeach
